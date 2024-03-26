@@ -8,11 +8,10 @@ courses: {compsci: {week: 26}}
 
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stroke Detection Form</title>
-    <style>
+<h1 style="font-size: 36px; font-weight: bold; color: #0d3b66; text-transform: uppercase; letter-spacing: 2px;">Titanic Survival Prediction Form</h1>
+
+<body>
+<style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -91,9 +90,7 @@ courses: {compsci: {week: 26}}
             position: relative;
             margin-bottom: 100px; 
         }
-        </style>
-    </head>
-
+    </style>
     <form id="titanicForm">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required><br><br>
@@ -164,5 +161,3 @@ courses: {compsci: {week: 26}}
         });
     }
     </script>
-
-</body>
