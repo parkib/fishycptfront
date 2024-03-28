@@ -109,11 +109,6 @@ permalink: stroke
             <input type="number" id="avg_glucose_level" name="avg_glucose_level" required><br><br>
             <label for="bmi">BMI (range can be from 10 up to 180):</label>
             <input type="number" id="bmi" name="bmi" required><br><br>
-            <label for="smoking_status">Smoking Status:</label>
-            <select id="smoking_status" name="smoking_status" required>
-                <option value="never smoked">Never Smoked</option>
-                <option value="smokes">Smokes/Has Smoked</option>
-            </select><br><br>
             <button type="button" onclick="predictStroke()">Predict Probability of Stroke</button>
         </form>
         <div id="result"></div>
@@ -137,7 +132,6 @@ permalink: stroke
                 heart_disease: form['heart_disease'].value,
                 avg_glucose_level: form['avg_glucose_level'].value,
                 bmi: form['bmi'].value,
-                smoking_status: form['smoking_status'].value
             };
             fetch('http://localhost:8086/api/stroke/predict', {
                 method: 'POST',
