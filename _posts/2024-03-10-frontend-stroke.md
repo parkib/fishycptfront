@@ -17,7 +17,6 @@ permalink: stroke
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
         }
-
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -26,7 +25,6 @@ permalink: stroke
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
         h1 {
             text-align: center;
             color: #3f51b5;
@@ -34,25 +32,21 @@ permalink: stroke
             margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
-
         form {
             max-width: 600px;
             margin: 0 auto;
         }
-
         p {
             color: #555;
             font-size: 16px;
             line-height: 1.5;
         }
-
         label {
             font-weight: bold;
             display: block;
             margin-bottom: 5px;
             color: #333;
         }
-
         input,
         select {
             width: calc(100% - 22px);
@@ -63,7 +57,6 @@ permalink: stroke
             box-sizing: border-box;
             font-size: 16px;
         }
-
         button {
             background-color: #3f51b5;
             color: #fff;
@@ -74,15 +67,12 @@ permalink: stroke
             cursor: pointer;
             transition: background-color 0.3s;
         }
-
         button:hover {
             background-color: #303f9f;
         }
-
         #result {
             margin-top: 20px;
         }
-
         #result p {
             color: #333;
             font-size: 16px;
@@ -133,7 +123,6 @@ permalink: stroke
         </form>
         <div id="result"></div>
     </div>
-
     <script>
         function predictStroke() {
             var form = document.getElementById('strokeForm');
