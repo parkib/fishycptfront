@@ -105,11 +105,6 @@ permalink: stroke
                 <option value="0">No heart disease</option>
                 <option value="1">Has heart disease</option>
             </select><br><br>
-            <label for="Residence_type">Residence Type:</label>
-            <select id="Residence_type" name="Residence_type" required>
-                <option value="Urban">Urban</option>
-                <option value="Rural">Rural</option>
-            </select><br><br>
             <label for="avg_glucose_level">Average Glucose Level (highest possible can be 290 mg/dL):</label>
             <input type="number" id="avg_glucose_level" name="avg_glucose_level" required><br><br>
             <label for="bmi">BMI (range can be from 10 up to 180):</label>
@@ -140,7 +135,6 @@ permalink: stroke
                 age: form['age'].value,
                 hypertension: form['hypertension'].value,
                 heart_disease: form['heart_disease'].value,
-                Residence_type: form['Residence_type'].value,
                 avg_glucose_level: form['avg_glucose_level'].value,
                 bmi: form['bmi'].value,
                 smoking_status: form['smoking_status'].value
