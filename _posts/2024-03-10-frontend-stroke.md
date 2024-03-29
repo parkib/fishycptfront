@@ -6,6 +6,7 @@ permalink: stroke
 ---
 
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +18,7 @@ permalink: stroke
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
         }
+
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -25,6 +27,7 @@ permalink: stroke
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         h1 {
             text-align: center;
             color: #3f51b5;
@@ -32,21 +35,25 @@ permalink: stroke
             margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
+
         form {
             max-width: 600px;
             margin: 0 auto;
         }
+
         p {
             color: #555;
             font-size: 16px;
             line-height: 1.5;
         }
+
         label {
             font-weight: bold;
             display: block;
             margin-bottom: 5px;
             color: #333;
         }
+
         input,
         select {
             width: calc(100% - 22px);
@@ -57,6 +64,7 @@ permalink: stroke
             box-sizing: border-box;
             font-size: 16px;
         }
+
         button {
             background-color: #3f51b5;
             color: #fff;
@@ -67,12 +75,15 @@ permalink: stroke
             cursor: pointer;
             transition: background-color 0.3s;
         }
+
         button:hover {
             background-color: #303f9f;
         }
+
         #result {
             margin-top: 20px;
         }
+
         #result p {
             color: #333;
             font-size: 16px;
@@ -105,14 +116,25 @@ permalink: stroke
                 <option value="0">No heart disease</option>
                 <option value="1">Has heart disease</option>
             </select><br><br>
+            <label for="Residence_type">Residence Type:</label>
+            <select id="Residence_type" name="Residence_type" required>
+                <option value="Urban">Urban</option>
+                <option value="Rural">Rural</option>
+            </select><br><br>
             <label for="avg_glucose_level">Average Glucose Level (highest possible can be 290 mg/dL):</label>
             <input type="number" id="avg_glucose_level" name="avg_glucose_level" required><br><br>
             <label for="bmi">BMI (range can be from 10 up to 180):</label>
             <input type="number" id="bmi" name="bmi" required><br><br>
+            <label for="smoking_status">Smoking Status:</label>
+            <select id="smoking_status" name="smoking_status" required>
+                <option value="never smoked">Never Smoked</option>
+                <option value="smokes">Smokes/Has Smoked</option>
+            </select><br><br>
             <button type="button" onclick="predictStroke()">Predict Probability of Stroke</button>
         </form>
         <div id="result"></div>
     </div>
+
     <script>
         function predictStroke() {
             var form = document.getElementById('strokeForm');
@@ -130,8 +152,10 @@ permalink: stroke
                 age: form['age'].value,
                 hypertension: form['hypertension'].value,
                 heart_disease: form['heart_disease'].value,
+                Residence_type: form['Residence_type'].value,
                 avg_glucose_level: form['avg_glucose_level'].value,
                 bmi: form['bmi'].value,
+                smoking_status: form['smoking_status'].value
             };
             fetch('http://localhost:8086/api/stroke/predict', {
                 method: 'POST',
